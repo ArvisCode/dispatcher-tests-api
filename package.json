@@ -1,0 +1,49 @@
+{
+  "name": "dispatcher-tests-api",
+  "version": "1.0.0",
+  "description": "",
+  "stack": "heroku-22",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server",
+    "dev": "cross-env NODE_ENV=development nodemon server",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArvisCode/dispatcher-tests-api.git"
+  },
+  "author": "personal project [ArvisCode]",
+  "license": "BSD 3",
+  "bugs": {
+    "url": "https://github.com/ArvisCode/dispatcher-tests-api/issues"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "bson-objectid": "^2.0.3",
+    "cors": "2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "4.17.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "jest": "^28.1.2",
+    "nodemon": "2.0.15",
+    "supertest": "^6.2.4"
+  },
+  "homepage": "https://github.com/ArvisCode/dispatcher-tests-api#readme"
+}
