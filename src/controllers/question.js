@@ -24,11 +24,22 @@ class Question {
         .status(200)
         .json({ message: "status 200", response: allQuestion });
     } catch (error) {
-      return res.status(404).json({
-        message: `Question not found`,
-        response: null,
-        error: error,
-      });
+      next(error);
+    }
+  }
+
+  async getQuestionById(req, res, next) {
+    try {
+      const { _id } = req.body;
+      const questionById = await QuestionModel.findById(_id);
+      if (!questionById) {
+        createError(404);
+      }
+      return res
+        .status(200)
+        .json({ message: "status 200", response: questionById });
+    } catch (error) {
+      next(error);
     }
   }
 
