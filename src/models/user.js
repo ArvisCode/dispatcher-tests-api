@@ -1,3 +1,4 @@
+const { string } = require("joi");
 const { Schema, model } = require("mongoose");
 const names = [];
 
@@ -39,7 +40,6 @@ const schema = new Schema(
     },
   },
   {
-    versionKey: true,
     timestamps: true,
   }
 );
