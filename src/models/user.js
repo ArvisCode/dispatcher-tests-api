@@ -15,12 +15,12 @@ const schema = new Schema(
     },
     type: {
       type: String,
-      enum: ["lord", "dispatcher"],
+      enum: ["operator", "dispatcher"],
       default: "dispatcher",
     },
     token: {
       type: String,
-      required: [true, "Verify token is required"],
+      default: "",
     },
     score_tt_1: {
       type: Number,
