@@ -6,21 +6,13 @@ const schema = new Schema(
       type: String,
       required: [true, "Question is required"],
     },
-    true_answer: {
-      type: String,
+    answers: {
+      type: Array,
       required: [true, "True_answer is required"],
     },
-    false_answer_1: {
-      type: String,
-      required: [true, "False_answer_1 is required"],
-    },
-    false_answer_2: {
-      type: String,
-      required: [true, "False_answer_2 is required"],
-    },
-    false_answer_3: {
-      type: String,
-      required: [true, "False_answer_3 is required"],
+    index_true_answer: {
+      type: Number,
+      default: -1,
     },
     score_true: {
       type: Number,
@@ -30,7 +22,7 @@ const schema = new Schema(
       type: Number,
       default: 0,
     },
-    answerers: {
+    members: {
       type: Array,
       default: [],
     },
